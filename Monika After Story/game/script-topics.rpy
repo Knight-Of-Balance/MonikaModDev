@@ -4779,7 +4779,8 @@ init 5 python:
     monika_random_topics.append('monika_urgent')
 
 label monika_urgent:
-    m 2d "[player], do you have a second?"
+
+m 2d "[player], do you have a second?"
     m 3o "There's something I need to tell you."
     m 1f "It's important."
     m 1g "I..."
@@ -4789,7 +4790,8 @@ label monika_urgent:
     m 1l "Sorry~"
     m 1j "I wish I could see the look on your face right now!"
     m 1k "I'm sure it's adorable~"
-    return
+
+return
     
 init 5 python:
     for key in ['marry','marriage','marriage proposal']:
@@ -4821,6 +4823,26 @@ label monika_coffee:
     m 4a "Iced coffee, however, tends to be sweeter and more pleasant to drink in warmer weathers."
     m 2e "It's funny how a drink for giving you energy became a treat for you to enjoy."
     m 1k "Maybe if I find out how, I'll tinker with the script so I can finally drink some! Ahaha~"
+    return
+    
+init 5 python:
+    for key in ['shut in', 'hikikomori']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_hikikiomori')
+ 
+ label monika_hikikomori
+    m 2c "Hey [player], did you know that there are certain people in the world who shun the world and live in isolation?"
+    m 2d "Japan refers to this condition as "hikikomori", although it happens all around the world."
+    m 1g "It's really sad to hear about it."
+    m 1f "People who have drawn away from society because things have gotten so stressful and so bad for them that seclution is the best option"
+    m 3c "Humans are social creatures after all."
+    m 3d "We crave interactions and feedback."
+    m 1g "So something like that would only hurt you, right?"
+    m 1o "...:
+    m 3g "[player], if society ever feels overwhleming and you feel like shutting yourself away."
+    m 4g "Come talk to me."
+    m 3a "I want you to be as happy and healthy as possible."
+    m 4b "Just like any girlfriend would."
     return
 
 ##################
